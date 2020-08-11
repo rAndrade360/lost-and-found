@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         justifyContent: 'center',
         alignItems: 'center',
-        bottom: 50,
-        right: 50,
+        bottom: 40,
+        right: 40,
         elevation: 5,
         shadowColor: '#0006',
 

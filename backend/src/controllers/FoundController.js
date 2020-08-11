@@ -26,8 +26,9 @@ export const store = async (req, res) => {
 };
 
 export const index = async (req, res) => {
-  const found = await Found.find().populate('user_id');
-  return res.json(found);
+  const foundResult = await Found.find().populate('user_id');
+  const foundToReturn = foundResult.map(found => ({found, tumbnail_url: found.found_url}));
+  return res.json(foundToReturn);
 };
 
 export const show = async (req, res) => {
